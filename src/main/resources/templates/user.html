@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to the User Page!</h1>
+    <p><strong>Username:</strong> <span th:text="${username}"></span></p>
+    <p><strong>User ID:</strong> <span th:text="${userId}"></span></p>
+    <h2>All Users</h2>
+    <ul>
+        <li th:each="user : ${users}" th:text="${user.email}"></li>
+    </ul>
+</div>
+</body>
+</html>
